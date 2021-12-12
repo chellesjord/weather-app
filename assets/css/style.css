@@ -1,0 +1,50 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 0.5;
+  }
+
+  div {
+      padding: 25px;
+  }
+  
+  .dayBlock {
+    text-align: left;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border: 1px solid black;
+  }
+
+  .dayBlock h2 {
+      font-weight: bold;
+  }
+  
+  .time-block{
+    text-align: center;
+    border-radius: 15px;
+  }
+  
+  .searchBtn, .pastCityBtn {
+    border-left: 1px solid black;
+    background-color: #06AED5;
+    color: white;
+    width: 200px;
+  }
+  
+  .searchBtn, .pastCityBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+
+  .pastCityBtn {
+      background-color: #efefef;
+  }
+
+  .forcastDays {
+      background-color: #33475a;
+      color: white;
+      margin:auto;
+  }
+
+  

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="display-7">Weather Dashboard</h1>
+        <!-- <p id="currentDay" class="lead">
+            <span id="date"></span>
+        </p> -->
+    </header>
+    <div class="row form-group">
+        <!--search column-->
+        <div class="col-3 searchContainer">
+            <fieldset id="city-form">
+                <h1>Search for a City:</h1>
+                <input type="text" id="cityName" placeholder="Select City"></input>
+                <button class="btn btn-primary btn-lg btn-block searchBtn">Search</button>
+            </fieldset>
+            <button class="pastCityBtn"></button>
+        </div>
+
+
+        <div class="col-9">
+            <!--current day-->
+            <div class="dayBlock">
+                <h2 id="date">
+                    <span id="currentCityDate"></span>
+                </h2>
+                <p id="currentTemp">Temp:</p>
+                <p id="currentWind">Wind:</p>
+                <p id="currentHumidity">Humidity:</p>
+                <p id="currentUV">UV Index:</p>
+            </div>
+            <!--future forcast-->
+            <div class="row futureDayForecast" id="futureForcast-search-term">
+                <h2 class="col-12"><strong>5-Day Forcast:</strong></h2>
+                <div class="col-2 forcastDays" id="futureForcast-container">
+                    <p class="date" id="fdate1"></p>
+                    <p class="weatherIcon">ICON</p>
+                    <p class="futureTemp">54degress</p>
+                    <p class="futureWind">12 MPH</p>
+                    <p class="futureHumidity">55%</p>
+                </div>
+                <div class="col-2 forcastDays">
+                    <p class="date" id="fdate2"></p>
+                    <p class="weatherIcon">ICON</p>
+                    <p class="futureTemp">54degress</p>
+                    <p class="futureWind">12 MPH</p>
+                    <p class="futureHumidity">55%</p>
+                </div>
+                <div class="col-2 forcastDays">
+                    <p class="date" id="fdate3"></p>
+                    <p class="weatherIcon">ICON</p>
+                    <p class="futureTemp">54degress</p>
+                    <p class="futureWind">12 MPH</p>
+                    <p class="futureHumidity">55%</p>
+                </div>
+                <div class="col-2 forcastDays">
+                    <p class="date" id="fdate4"></p>
+                    <p class="weatherIcon">ICON</p>
+                    <p class="futureTemp">54degress</p>
+                    <p class="futureWind">12 MPH</p>
+                    <p class="futureHumidity">55%</p>
+                </div>
+                <div class="col-2 forcastDays">
+                    <p class="date" id="fdate5"></p>
+                    <p class="weatherIcon">ICON</p>
+                    <p class="futureTemp">54degress</p>
+                    <p class="futureWind">12 MPH</p>
+                    <p class="futureHumidity">55%</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
