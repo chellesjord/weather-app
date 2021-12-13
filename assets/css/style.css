@@ -7,6 +7,15 @@ body {
 div {
     padding: 25px;
 }
+
+.dashboardHead {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
   
 .dayBlock {
     text-align: left;
@@ -23,6 +32,11 @@ div {
 .time-block{
     text-align: center;
     border-radius: 15px;
+}
+
+.forecast {
+    font-size: 20px;
+    font-weight: bold;
 }
   
 .searchBtn, .pastCityBtn {

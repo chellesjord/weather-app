@@ -20,6 +20,7 @@ var formSubmitHandler = function (event) {
     } else {
         alert("Please enter a city")
     }
+    saveCityHistory()
 };
 
 var getCityDayForcast = function (cityName) {
@@ -119,5 +120,9 @@ var getCityWeekForcast = function (cityName) {
         });
 };
 
+var saveCityHistory = function () {
+    localStorage.setItem("cityHistory", JSON.stringify(cityHistory));
+    console.log(cityHistory);
+}
 //add event listeners to search
 cityFormEl.addEventListener("submit", formSubmitHandler);
