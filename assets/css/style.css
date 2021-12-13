@@ -2,49 +2,80 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 0.5;
-  }
+}
 
-  div {
-      padding: 25px;
-  }
+div {
+    padding: 25px;
+}
+
+.dashboardHead {
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
   
-  .dayBlock {
+.dayBlock {
     text-align: left;
     background-color: transparent;
     color: black;
     border-radius: 0;
     border: 1px solid black;
-  }
+}
 
-  .dayBlock h2 {
-      font-weight: bold;
-  }
+.dayBlock h2 {
+    font-weight: bold;
+}
   
-  .time-block{
+.time-block{
     text-align: center;
     border-radius: 15px;
-  }
+}
+
+.forecast {
+    font-size: 20px;
+    font-weight: bold;
+}
   
-  .searchBtn, .pastCityBtn {
+.searchBtn, .pastCityBtn {
     border-left: 1px solid black;
     background-color: #06AED5;
     color: white;
     width: 200px;
-  }
+}
   
-  .searchBtn, .pastCityBtn i:hover {
+.searchBtn, .pastCityBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
-  }
+}
 
-  .pastCityBtn {
-      background-color: #efefef;
-  }
+.pastCityBtn {
+    background-color: #efefef;
+}
 
-  .forcastDays {
-      background-color: #33475a;
-      color: white;
-      margin:auto;
-  }
+.forcastDays {
+    background-color: #33475a;
+    color: white;
+    margin:auto;
+}
 
+.greenbg {
+    background-color: green;
+    border-radius: 2px;
+    padding: 1px 2px;
+}
+
+.yellowbg {
+    background-color: yellow;
+    border-radius: 2px;
+    padding: 1px 2px;
+}
+
+.redbg {
+    background-color: red;
+    border-radius: 2px;
+    padding: 1px 2px;
+}
   
