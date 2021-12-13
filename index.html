@@ -23,25 +23,24 @@
     <div class="row form-group">
         <!--search column-->
         <div class="col-3 searchContainer">
-            <fieldset id="city-form">
-                <h1>Search for a City:</h1>
+            <form id="city-form">
+                <label>Search for a City:</label>
                 <input type="text" id="cityName" placeholder="Select City"></input>
-                <button class="btn btn-primary btn-lg btn-block searchBtn">Search</button>
-            </fieldset>
+                <button type="submit" class="btn btn-primary btn-lg btn-block searchBtn">Search</button>
+            </form>
             <button class="pastCityBtn"></button>
         </div>
 
 
         <div class="col-9">
             <!--current day-->
-            <div class="dayBlock">
+            <div id="dayBlock">
                 <h2 id="date">
-                    <span id="currentCityDate"></span>
                 </h2>
-                <p id="currentTemp">Temp:</p>
-                <p id="currentWind">Wind:</p>
-                <p id="currentHumidity">Humidity:</p>
-                <p id="currentUV">UV Index:</p>
+                <p id="Temp"></p>
+                <p id="Wind"></p>
+                <p id="Humidity"></p>
+                <p id="UV"></p>
             </div>
             <!--future forcast-->
             <div class="row futureDayForecast" id="futureForcast-search-term">
