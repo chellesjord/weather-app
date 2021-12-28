@@ -14,4 +14,4 @@ THEN the user again is presented with current and future conditions for that cit
 Depolyed App
 https://chellesjord.github.io/weather-app/
 
-<![](.\assets\Screenshot.JPG)
+<![screenshot](.\assets\Screenshot.JPG)
