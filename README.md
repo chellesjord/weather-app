@@ -11,4 +11,7 @@ THEN the user is presented with a 5-day forecast that displays the date, an icon
 WHEN the user clicks on a city in the search history
 THEN the user again is presented with current and future conditions for that city
 
+Depolyed App
+https://chellesjord.github.io/weather-app/
+
 <![](.\assets\Screenshot.JPG)

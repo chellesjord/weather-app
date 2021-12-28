@@ -20,8 +20,24 @@ var formSubmitHandler = function (event) {
     } else {
         alert("Please enter a city")
     }
+    localStorage.setItem("city", city)
     saveCityHistory()
 };
+
+var pastCityHandler = function (event) {
+    event.preventDefault();
+
+    var city = localStorage.getItem("city");
+    if (city) {
+        getCityDayForcast(city);
+        getCityWeekForcast(city);
+
+        //clear old content
+        cityInputEl.value = "";
+    } else {
+        alert("Please enter a city")
+    }
+}
 
 var getCityDayForcast = function (cityName) {
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=afc02854dff0cf33f3674d9fbe5474da";
@@ -121,8 +137,16 @@ var getCityWeekForcast = function (cityName) {
 };
 
 var saveCityHistory = function () {
-    localStorage.setItem("cityHistory", JSON.stringify(cityHistory));
-    console.log(cityHistory);
+    const savedCityBtn = document.createElement("button");
+    var savedCities = localStorage.getItem("city");
+    savedCityBtn.innerHTML = savedCities;
+    document.getElementById("pastCityBtn").appendChild(savedCityBtn);
+    //when I click the SavedCityBtn it should re-search that city
+    savedCityBtn.addEventListener("click", pastCityHandler)
 }
+
+// saved multiply cities after refresh
+saveCityHistory()
+
 //add event listeners to search
 cityFormEl.addEventListener("submit", formSubmitHandler);
