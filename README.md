@@ -1,17 +1,26 @@
-# weather-app
-GIVEN a weather dashboard with form inputs
-WHEN the user searches for a city
-THEN the user is presented with current and future conditions for that city and that city is added to the search history
-WHEN the user views current weather conditions for that city
-THEN the user is presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN the user views the UV index
-THEN the user is presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN the user views future weather conditions for that city
-THEN the user is presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN the user clicks on a city in the search history
-THEN the user again is presented with current and future conditions for that city
+# Weather-app
+## Description:
+This application shows the weather outlook for multiple cities so that the user can plan a trip accordingly. The user can search a city and is presented with current and future conditions for that city. That city is also added to the search history. The city weather conditions include the city name, date, weather conditions, temperature, humidity, wind speed, and UV index.
 
+## Table of Contents:
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Questions](#questions)
+
+## Installation
+The user will open the application in the browser and search a given city in the United States. If the user would like to go back and view previous searches, they can search the city again or click the city button below the search bar.
+
+Languages used: JavaScript,HTML,CSS 
+
+## Usage
 Depolyed App
 https://chellesjord.github.io/weather-app/
 
 ![screenshot](./assets/Screenshot.JPG)
+
+## Questions:
+Check out my [GitHub page](https://github.com/chellesjord)!
+
+If you have additonal questions email me at 
+<a href="mailto:m.kayejordan@gmail.com">m.kayejordan@gmail.com</a>.
