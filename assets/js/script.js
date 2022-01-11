@@ -4,6 +4,8 @@ var futureContainerEl = document.querySelector("#futureForcast-container");
 var futureSearchTerm = document.querySelector("#futureForcast-search-term");
 var currentTemperature = document.querySelector("#currentTemp");
 
+var citiesArray = [];
+
 var formSubmitHandler = function (event) {
     //prevent page from refreshing
     event.preventDefault();
@@ -20,14 +22,15 @@ var formSubmitHandler = function (event) {
     } else {
         alert("Please enter a city")
     }
-    localStorage.setItem("city", city)
+    citiesArray.push(city);
+    localStorage.setItem("citiesArray", JSON.stringify(citiesArray));
     saveCityHistory()
 };
 
 var pastCityHandler = function (event) {
     event.preventDefault();
-
-    var city = localStorage.getItem("city");
+    var city = event.target.innerHTML;
+    console.log(city);
     if (city) {
         getCityDayForcast(city);
         getCityWeekForcast(city);
@@ -137,15 +140,28 @@ var getCityWeekForcast = function (cityName) {
 };
 
 var saveCityHistory = function () {
-    const savedCityBtn = document.createElement("button");
-    var savedCities = localStorage.getItem("city");
-    savedCityBtn.innerHTML = savedCities;
-    document.getElementById("pastCityBtn").appendChild(savedCityBtn);
-    //when I click the SavedCityBtn it should re-search that city
-    savedCityBtn.addEventListener("click", pastCityHandler)
+    var savedCities = localStorage.getItem("citiesArray");
+
+    //if there are no saved cities, set cities to empty array and return out of the function
+    if (!savedCities) {
+        return false;
+    }
+
+    //parse into array of objects
+    citiesArray = JSON.parse(savedCities);
+
+    //loop through citiesArray array
+
+    for (var i = 0; i < citiesArray.length; i++) {
+        const citiesBtn = document.createElement("button");
+        citiesBtn.innerHTML = citiesArray[i];
+        //when I click the SavedCityBtn it should re-search that city
+        citiesBtn.addEventListener("click", pastCityHandler)
+        document.getElementById("pastCityBtn").appendChild(citiesBtn);
+    }
 }
 
-// saved multiply cities after refresh
+// saved multiple cities after refresh
 saveCityHistory()
 
 //add event listeners to search
